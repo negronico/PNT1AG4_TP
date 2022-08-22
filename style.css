@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: beige;
 }
 
 .galeria {
@@ -25,6 +26,7 @@ body {
 }
 
 .cuerpo-card {
+    font-family: Arial, Helvetica, sans-serif;
     position: absolute;
     bottom: 0;
     padding: 10px;
@@ -45,4 +47,40 @@ body {
     object-fit: cover;
     height: 300px;
 }
+
+ul {
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(255, 77, 0);
+  }
+
+  li {
+    float:left;
+  }
+  
+  .contact {
+    float: right;
+    background-color:black
+  }
+  
+  .contact a:hover{
+    background-color:rgba(60, 59, 59, 0.922)
+  }
+  
+  li a {
+    display: block;
+    color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: rgb(245, 81, 40);
+  }
+  
+
 
