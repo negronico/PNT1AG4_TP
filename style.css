@@ -7,6 +7,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: beige;
+    overflow-x: hidden;
 }
 
 .container {
@@ -14,34 +15,28 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 4rem;
+  margin:10px;
 }
 
 .galeria {
      display: flex;
      flex-wrap: wrap;
      overflow-y: auto;
-     padding: 16px;
-     justify-content: start;
+     justify-content:center;
      margin: auto;
 }
-.galeria img{
+.galeria img {
     width: 100%;
     object-fit: cover;
     width: 80px;
     height: 80px;
-    margin-right: 10px;
     display: block;
     margin-top: 10px;
 }
 
-.title {
-
-}
-
 .card {
     margin-right: 10px;
-    position: relative;
+    position:relative;
 }
 
 .cuerpo-card {
@@ -49,19 +44,19 @@ body {
     position: absolute;
     bottom: 0;
     padding: 10px;
-    margin-right: 10px;
+    margin-right: 5px;
     background-color: rgb(0, 0,0,0.4);
     color: #fff ;
 }
 
 .cuerpo-card h5,
-.cuerpo-card p{
+.cuerpo-card p {
     margin: 0;
 }
 
 
 
-.card img{
+.card img {
     width: 200px;
     object-fit: cover;
     height: 300px;
@@ -69,50 +64,53 @@ body {
 
 ul {
     list-style-type: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(255, 77, 0);
+    background-color: rgb(255, 38, 0);
+    font-family: Arial, Helvetica, sans-serif;
   }
 
-  li {
+li {
     float:left;
-  }
+}
   
-  .contact {
-    float: right;
-    background-color:black
-  }
-  
-  .contact a:hover{
-    background-color:rgba(60, 59, 59, 0.922)
-  }
-  
-  li a {
+li a {
     display: block;
-    color: rgba(255, 255, 255, 0.95);
+    color: rgba(254, 222, 216, 0.95);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
+}
+
+li a:hover {
+    background-color:  rgb(252, 223, 209);
+}
+
+.contact {
+    float: right;
+    background-color:black
+}
   
-  li a:hover {
-    background-color: rgb(245, 81, 40);
-  }
+.contact:hover {
+    background-color:rgba(209, 209, 209, 0.637);
+}
+
   
-  .carrousel{
+.carrousel {
     width: 100%;
 }
 
-.conteCarrousel{
+.conteCarrousel {
     width: 100%;
     height: 200px;
     overflow: hidden;
 }
 
-.itemCarrousel{
-    position: relative;
+.itemCarrousel {
+    position:center;
+    display:inline-block;
     width: 100%;
     height: 100%;
 }
@@ -133,58 +131,70 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px; 
+     
 }
 
 .itemCarrouselArrows > i:hover {
     cursor: pointer;
 }
 
-#itemCarrousel-1{
+#itemCarrousel-1 {
     background-color: rgb(226, 50, 50);
 }
 
-#itemCarrousel-2{
+#itemCarrousel-2 {
     background-color: rgb(50, 200, 226);
 }
 
-#itemCarrousel-3{
+#itemCarrousel-3 {
     background-color: rgb(200, 226, 50);
 }
 
-.conteCarrouselController{
+.conteCarrouselController {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 
-.conteCarrouselController > a{
+.conteCarrouselController > a {
     text-decoration: none;
     font-size: 2em;
     color: grey;
 }
 
-.itemCarrouselArrows > a > i{
+.itemCarrouselArrows > a > i {
     color: white;
 }
 
 img {
-    width: 50%;
+    width: 100%;
     height: 100%;
     
 }
 
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bolder;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 24px;
+    color:black;
+}
 
 footer {
-  max-width: 1000px;
+  width: auto;
   background: #000000;
   margin: 0 auto;
-  border-radius: 0 0 20px 20px;
   color: #fff;
-  text-align: center;
-  padding: 30px;
+  text-align:justify;
+  padding: 20px 5px;
   box-sizing: border-box;
-  font-family: Arial;
-  font-size: 18px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
+
+h4 {
+    font-size: 16px;
+}
+
 
