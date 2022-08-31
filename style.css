@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: beige;
+    background-color: rgb(255, 244, 238);
     overflow-x: hidden;
 }
 
@@ -78,23 +78,23 @@ li {
   
 li a {
     display: block;
-    color: rgba(254, 222, 216, 0.95);
+    color: rgb(254, 222, 216);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 li a:hover {
-    background-color:  rgb(252, 223, 209);
+    background-color:  rgb(255, 68, 0);
 }
 
 .contact {
     float: right;
-    background-color:black
+    background-color:rgb(0, 0, 0);
 }
   
 .contact:hover {
-    background-color:rgba(209, 209, 209, 0.637);
+    background-color:rgb(40, 40, 40);
 }
 
   
@@ -178,7 +178,7 @@ img {
     text-align: center;
     box-sizing: border-box;
     font-size: 24px;
-    color:black;
+    color:rgb(0, 0, 0);
 }
 
 footer {
