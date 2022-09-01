@@ -12,30 +12,30 @@ body {
 
 .container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction:column;
+  justify-content:space-evenly;
+  overflow-y:auto;
+  text-align:left;
   align-items: center;
-  margin:10px;
+  margin:auto;
 }
 
 .galeria {
      display: flex;
-     flex-wrap: wrap;
-     overflow-y: auto;
-     justify-content:center;
-     margin: auto;
+     flex-direction:row;
+     flex-wrap: nowrap;
+     margin:auto;
 }
 .galeria img {
     width: 100%;
-    object-fit: cover;
+    object-fit:fill;
     width: 80px;
     height: 80px;
     display: block;
-    margin-top: 10px;
 }
 
 .card {
-    margin-right: 10px;
+    margin: 10px;
     position:relative;
 }
 
@@ -62,21 +62,22 @@ body {
     height: 300px;
 }
 
-ul {
+nav {
     list-style-type: none;
     font-weight: bold;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(255, 38, 0);
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 38, 0);
   }
 
-li {
+span {
     float:left;
+    
 }
   
-li a {
+span a {
     display: block;
     color: rgb(254, 222, 216);
     text-align: center;
@@ -84,93 +85,28 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
-    background-color:  rgb(255, 68, 0);
+span a:hover {
+    background-color:  rgb(255, 107, 54);
+    text-decoration: none;
+    color: rgb(254, 222, 216);
 }
 
-.contact {
+#contact {
     float: right;
     background-color:rgb(0, 0, 0);
 }
   
-.contact:hover {
-    background-color:rgb(40, 40, 40);
-}
-
-  
-.carrousel {
-    width: 100%;
-}
-
-.conteCarrousel {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-}
-
-.itemCarrousel {
-    position:center;
-    display:inline-block;
-    width: 100%;
-    height: 100%;
-}
-
-.itemCarrouselTarjeta{
-    width: 100%;
-    height: 100%;
-}
-
-.itemCarrouselArrows{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%; 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-     
-}
-
-.itemCarrouselArrows > i:hover {
-    cursor: pointer;
-}
-
-#itemCarrousel-1 {
-    background-color: rgb(226, 50, 50);
-}
-
-#itemCarrousel-2 {
-    background-color: rgb(50, 200, 226);
-}
-
-#itemCarrousel-3 {
-    background-color: rgb(200, 226, 50);
-}
-
-.conteCarrouselController {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.conteCarrouselController > a {
+#contact:hover {
+    background-color:rgb(78, 78, 78);
     text-decoration: none;
-    font-size: 2em;
-    color: grey;
+    color: rgb(254, 222, 216);
 }
-
-.itemCarrouselArrows > a > i {
-    color: white;
-}
-
-img {
+ 
+#image_carrousel{
     width: 100%;
-    height: 100%;
-    
+    height: 400px;
 }
+
 
 .title {
     font-family: Arial, Helvetica, sans-serif;
@@ -179,6 +115,7 @@ img {
     box-sizing: border-box;
     font-size: 24px;
     color:rgb(0, 0, 0);
+    margin:30px;
 }
 
 footer {
