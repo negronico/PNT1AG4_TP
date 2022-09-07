@@ -1,25 +1,33 @@
 function formularioValidacion() {
 
-    var nombre = document.registracion.nombre;
-    var apellido = document.registracion.apellido;
-    var comensales = document.registracion.comensales;
-    var telefono = document.registracion.telefono;
-    var email = document.registracion.email;
+    var asunto = document.getElementById("asunto");
+    var mensaje = document.getElementById("message");
+    var email = document.getElementById("mail");
 
-    if (ValidaLetra(nombre)) {
-        if (ValidaLetra(apellido)) {
-            if (ValidaCantidad(comensales)) {
-                if (ValidaNumero(telefono)) {
-                    if (ValidacionEmail(email)) {
-
-                    }
-                }
-            }
-        }
+    if (ValidacionEmail(email) && ValidaMensaje(mensaje) && ValidaAsunto(asunto)) {
+        alert("enviado correctamente");
     }
-    return false;
 }
 
+function ValidaAsunto(a) {
+    if(a.length < 0) {
+        alert("Escriba un asunto");
+        return false;
+    }
+    return true;
+}
+
+function ValidaMensaje(msg) {
+    if(msg.length > 500) {
+        alert("Escriba un mensaje mas corto")
+        return false;
+    }
+    if(msg.length < 0) {
+        alert("Escriba un asunto")
+        return false;
+    }
+    return true;
+}
 
 function ValidaLetra(nombre) {
     var letras = /^[A-Za-z]+$/;
