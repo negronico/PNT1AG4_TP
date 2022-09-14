@@ -394,9 +394,10 @@
 
 	<footer>
 		<h4 id="Contacto">Contacto </h4>
-		<p>Tel: 4111-0101</p>
-		<p>Email: casadepastas@reservas.com</p>
-		<p>www.casadepastas.com</p>
+		<br/>
+		<p style style="line-height: 100%">Tel: 4111-0101 <br/> 
+		Email: casadepastas@reservas.com <br/>
+		www.casadepastas.com</p>
 		<form onsubmit="formularioValidacion()">
 			<div id="banner1">
 				<div id="banner2">
@@ -405,7 +406,7 @@
 							<label>Asunto: </label>
 						</div>
 						<div class="col-sm-12 col-md-10 col-lg-10">
-							<input type="text" name="subject" id="asunto" placeholder="Asunto.."
+							<input type="text" name="subject" id="asunto" placeholder="Asunto"
 								style="padding: 5px 5px; width:100%; color:black;" />
 						</div>
 					</div>
@@ -420,17 +421,35 @@
 					</div>
 					<div class="row" style="margin-top:3px;">
 						<div class="col-sm-12 col-md-2 col-lg-2">
-							<label>Su mensaje: </label>
+							<label>Fecha y hora: </label>
 						</div>
 						<div class="col-sm-12 col-md-10 col-lg-10">
-							<textarea name="text" id="message" placeholder="Sugerencias? Dudas?"
-								style="padding: 5px 5px; width:100%;" required></textarea>
+							<input type="text" name="subject" id="fecha" placeholder="Ej: 21/11 19:30"
+								style="padding: 5px 5px; width:100%; color:black;" />
 						</div>
-						<!--el buton enviar-->
-						<div class="row" style="margin-top:5px;">
-							<div class="col-sm-12 col-lg-12" style="margin-left: 500%;" >
-								<input id="js_send" type="submit" value="Enviar" class="btn-dark boton" />
+</div>
+					<div class="row" style="margin-top:3px;">
+							<div class="col-sm-12 col-md-2 col-lg-2">
+								<label>Comensales: </label>
 							</div>
+							<div class="col-sm-12 col-md-10 col-lg-10">
+								<input type="text" name="subject" id="comensales" placeholder="Cantidad de comensales"
+									style="padding: 5px 5px; width:100%; color:black;" />
+							</div>
+					</div>
+					<div class="row" style="margin-top:3px;">
+							<div class="col-sm-12 col-md-2 col-lg-2">
+								<label>Aclaraciones: </label>
+							</div>
+							<div class="col-sm-12 col-md-10 col-lg-10">
+								<textarea name="text" id="message" placeholder="Sugerencias, dudas o consultas"
+									style="padding: 5px 5px; width:100%;" required></textarea>
+							</div>
+							<!--el buton enviar-->
+							<div class="row" style="margin-top:5px;">
+								<div class="col-sm-12 col-lg-12" style="margin-left: 500%;" >
+									<input id="js_send" type="submit" value="Enviar" class="btn-dark boton" />
+								</div>
 						</div>
 					</div>
 				</div>
