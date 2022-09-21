@@ -3,40 +3,33 @@ function formularioValidacion() {
     var asunto = document.getElementById("asunto");
     var mensaje = document.getElementById("message");
     var email = document.getElementById("mail");
+    var cantidad = document.getElementById("comensales");
 
-    if (ValidacionEmail(email) && ValidaMensaje(mensaje) && ValidaAsunto(asunto)) {
-        alert("enviado correctamente");
+    if (ValidacionEmail(email) && ValidaMensaje(mensaje) && ValidaTexto(asunto) && ValidaCantidad(cantidad)) {
+        alert("Enviado correctamente");
     }
 }
-
-function ValidaAsunto(a) {
-    if(a.length < 0) {
-        alert("Escriba un asunto");
-        return false;
-    }
-    return true;
-}
-
+//no esta funcionando el length
 function ValidaMensaje(msg) {
     if(msg.length > 500) {
         alert("Escriba un mensaje mas corto")
         return false;
     }
     if(msg.length < 0) {
-        alert("Escriba un asunto")
+        alert("Escriba un mensaje")
         return false;
     }
     return true;
 }
 
-function ValidaLetra(nombre) {
+function ValidaTexto(nombre) {
     var letras = /^[A-Za-z]+$/;
 
     if (nombre.value.match(letras)) {
         return true;
     }
     else {
-        alert('Ingresaste un caracter invalido!');
+        alert('Ingresa un texto valido');
         nombre.focus(); //marca el cursor titilando
         return false;
     }
@@ -50,7 +43,7 @@ function ValidacionEmail(email) {
         return true;
     }
     else {
-        alert("Ingresaste un email invalido!");
+        alert("Ingresa un email valido");
         email.focus();
         return false;
     }

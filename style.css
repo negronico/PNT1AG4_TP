@@ -134,6 +134,9 @@ h4 {
     font-size: 16px;
 }
 
+p {
+    font-size: 12px;
+}
 
 #banner2 {
     margin: auto; 
@@ -142,6 +145,15 @@ h4 {
     padding: 10px;
 }
 
-#banner2 .row{
-    
+.row  {
+    margin-top:3px;
 }
+
+input {
+    padding: 5px 5px; 
+    width:100%; 
+    color:black;
+}
+
+
+
