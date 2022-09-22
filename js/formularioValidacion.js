@@ -1,89 +1,93 @@
 function formularioValidacion() {
+    const mensajeLargo = 50;
+    var mensaje = document.getElementById('mensaje');
+    var email = document.getElementById('mail');
+    var fecha = document.getElementById('fecha');
+    var telefono = document.getElementById('telefono');
+    var nombre = document.getElementById('nombre');
+    var cantidad = document.getElementById('comensales');
+    
 
-    var asunto = document.getElementById("asunto");
-    var mensaje = document.getElementById("message");
-    var email = document.getElementById("mail");
-
-    if (ValidacionEmail(email) && ValidaMensaje(mensaje) && ValidaAsunto(asunto)) {
-        alert("enviado correctamente");
+    if (validaLetra(nombre) && validacionEmail(email) && validaNumero(telefono) && validaFecha(fecha) && validaCantidad(cantidad)) {
+        alert("Formulario enviado correctamente");
     }
 }
 
-function ValidaAsunto(a) {
-    if(a.length < 0) {
-        alert("Escriba un asunto");
-        return false;
-    }
-    return true;
-}
-
-function ValidaMensaje(msg) {
-    if(msg.length > 500) {
-        alert("Escriba un mensaje mas corto")
-        return false;
-    }
-    if(msg.length < 0) {
-        alert("Escriba un asunto")
-        return false;
-    }
-    return true;
-}
-
-function ValidaLetra(nombre) {
+function validaLetra(nombre) {
     var letras = /^[A-Za-z]+$/;
+    var result = false;
 
     if (nombre.value.match(letras)) {
-        return true;
+        result= true;
     }
     else {
-        alert('Ingresaste un caracter invalido!');
+        alert('Ingresaste un nombre inválido!');
         nombre.focus(); //marca el cursor titilando
-        return false;
     }
+    return result;
 }
 
 
-function ValidacionEmail(email) {
+function validacionEmail(email) {
     var mail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var result = false;
 
     if (email.value.match(mail)) {
-        return true;
+        result= true;
     }
     else {
-        alert("Ingresaste un email invalido!");
+        alert("Ingresaste un email inválido!");
         email.focus();
-        return false;
     }
+    return result;
 }
 
 
-function ValidaNumero(telefono) {
-    var numero = /^\+?([0-9]{3})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+function validaNumero(telefono) {
+    var numero = /^\(?\d{2}\)?[\s\.-]?\d{4}[\s\.-]?\d{4}$/;
+    var result = false;
 
     if (telefono.value.match(numero)) {
-        return true;
+        result= true;
     }
     else {
-        alert("Ingresaste un teléfono invalido!");
+        alert("Ingresaste un teléfono inválido!");
         telefono.focus();
-        return false;
     }
+    return result;
+}
+
+function validaFecha(fecha) {
+    var numero = /^\d{4}([\-/.])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$/;
+    var date = new Date();
+    var fechaDeHoy = date.toISOString().split('T')[0];
+    var result = false;
+    
+    if (!(fecha.value.match(numero))) {
+        alert("Fecha inválida!");
+    } else if (fecha.value < fechaDeHoy){
+        alert("Fecha anterior a la actual!")
+    }else{
+        result= true;  
+    }
+    return result;
 }
 
 
-function ValidaCantidad(cantidad) {
+function validaCantidad(cantidad) {
     var min = 1;
     var max = 10;
-
+    var result = false;
 
     if (cantidad.value >= min && cantidad.value <= max) {
-        return true;
+        result= true;
     }
     else {
         alert("Ingrese cantidad entre 1 y 10!");
         cantidad.focus();
-        return false;
     }
+    return result;
 }
+
 
 
