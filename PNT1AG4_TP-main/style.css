@@ -1,0 +1,170 @@
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 244, 238);
+    overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction:column;
+  justify-content:space-evenly;
+  overflow-y:auto;
+  text-align:left;
+  align-items: center;
+  margin:auto;
+}
+
+.galeria {
+     display: flex;
+     flex-direction:row;
+     flex-wrap: nowrap;
+     margin:auto;
+}
+.galeria img {
+    width: 100%;
+    object-fit:fill;
+    width: 80px;
+    height: 80px;
+    display: block;
+}
+
+.card {
+    margin: 10px;
+    position:relative;
+}
+
+.cuerpo-card {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    background-color: rgb(0, 0,0,0.4);
+    color: #fff ;
+    max-height:30%;
+    min-height: 30%;
+    width: 100%;
+    overflow:hidden;
+    
+
+}
+
+.cuerpo-card:hover {
+
+    max-height:50%;
+    min-height: 30%;
+    overflow: visible;
+}
+
+.cuerpo-card h5{
+    margin: 0;
+    font-size: 16px;
+
+}
+
+.cuerpo-card p{
+    margin: 0;
+    font-size: 14px;
+
+}
+
+
+.card img {
+    width: 200px;
+    object-fit: cover;
+    height: 300px;
+}
+
+nav {
+    list-style-type: none;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 38, 0);
+  }
+
+span {
+    float:left;
+    
+}
+  
+span a {
+    display: block;
+    color: rgb(254, 222, 216);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+span a:hover {
+    background-color:  rgb(255, 107, 54);
+    text-decoration: none;
+    color: rgb(254, 222, 216);
+}
+
+#contact {
+    float: right;
+    background-color:rgb(0, 0, 0);
+}
+  
+#contact:hover {
+    background-color:rgb(78, 78, 78);
+    text-decoration: none;
+    color: rgb(254, 222, 216);
+}
+ 
+#image_carrousel{
+    width: 100%;
+    height: 400px;
+}
+
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bolder;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 34px;
+    color:rgb(0, 0, 0);
+    margin:30px;
+}
+
+footer {
+  width: auto;
+  background: #000000;
+  margin: 0 auto;
+  color: #fff;
+  text-align:center;
+  padding: 20px 5px;
+  box-sizing: border-box;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+
+#banner2 {
+    margin: auto; 
+    width: 60%; 
+    border: 5px solid black; 
+    padding: 10px;
+}
+
+/*#banner2 .row{}*/
+.button-submit {
+    margin: auto;
+    padding: 10px;
+    width: 70px;
+    background-color: #fff;
+}
